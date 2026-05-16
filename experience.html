@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    padding:0;
+}
+
+.navbar{
+    background-color:#f5ccaa !important;
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+    margin:0 auto; 
+    width:100%;
+    border-radius:50px; 
+    border:none;
+    padding:15px 40px;
+    box-shadow:0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-weight:700;
+    font-size:1.5rem;
+    letter-spacing:2px;
+    color:#B35A1F;
+    transition:transform 0.3s ease;
+    cursor:pointer;
+}
+
+.logo span{
+    font-size:0.8em;
+    font-weight:400;
+    color:#c07474;
+}
+
+.logo:hover{
+    transform:scale(1.05);
+}
+
+.nav-links{
+    list-style:none;
+    display:flex;
+    align-items:center;
+    gap:30px;
+}
+
+.nav-links a{
+    position:relative;
+    text-decoration:none !important;
+    color:#333 !important;
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:1px;
+    transition:0.3s ease;
+    display:inline-block;
+}
+
+.nav-links a::after{
+    content:'';
+    position:absolute;
+    width:0;
+    height:2px;
+    bottom:-4px;
+    left:50%;
+    background-color:#B35A1F;
+    transition:all 0.3s ease-in-out;
+    transform:translateX(-50%);
+}
+
+.nav-links a:hover::after{
+    width:100%;
+}
+
+/* Navbar Scroll Effect */
+.navbar.scrolled{
+    background-color:rgba(247, 230, 212, 0.95);
+    box-shadow:0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-top:10px;
+}
+
+/* Animasi Navbar */
+.nav-links li{
+    animation:fadeInDown 0.5s ease forwards;
+    opacity:0;
+}
+
+.nav-links li:nth-child(1){ animation-delay:0.1s; }
+.nav-links li:nth-child(2){ animation-delay:0.2s; }
+.nav-links li:nth-child(3){ animation-delay:0.3s; }
+.nav-links li:nth-child(4){ animation-delay:0.4s; }
+.nav-links li:nth-child(5){ animation-delay:0.5s; }
+
+@keyframes fadeInDown{
+    from{
+        opacity:0;
+        transform:translateY(-20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+ /* EXPERIENCE SECTION */
+.experience-section{
+    background: linear-gradient(to bottom, #fff7f7, #f6efef);
+    padding: 100px 0;
+}
+
+/* TITLE */
+.experience-section .small-title{
+    text-align: center;
+    color: #d6a4a4;
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin-bottom: -10px;
+}
+
+.experience-section .main-title{
+    text-align: center;
+    font-size: 65px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 50px;
+}
+
+.experience-section .main-title span{
+    color: #c78484;
+}
+
+/* GARIS */
+.experience-section .main-title::after{
+    content: '';
+    display: block;
+    width: 180px;
+    height: 4px;
+    background: #ff8800;
+    margin: 15px auto 0;
+    border-radius: 50px;
+}
+
+/* CARD */
+.experience-card{
+    width: 100%;
+    max-width: 900px; /* biar memanjang */
+    margin: auto;
+
+    background: rgba(255,255,255,0.65);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 30px;
+
+    padding: 50px;
+
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+
+    position: relative;
+    overflow: hidden;
+}
+
+/* PARAGRAF */
+.experience-card p{
+    text-align: justify;
+    text-indent: 50px; /* MENJOROK */
+    line-height: 2;
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 25px;
+    position: relative;
+    z-index: 2;
+}
+
+/* HOVER */
+.experience-card:hover{
+    transform: translateY(-5px);
+    transition: .4s;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+    .experience-section{
+        padding: 70px 20px;
+    }
+
+    .experience-section .main-title{
+        font-size: 42px;
+    }
+
+    .experience-card{
+        padding: 30px;
+    }
+
+    .experience-card p{
+        font-size: 14px;
+        line-height: 1.8;
+        text-indent: 30px;
+    }
+
+}
+
+/* FOOTER */
+.footer-top{
+    background-color:#f9e6d8;
+    padding:60px 0 30px;
+    margin-top:0;
+}
+
+.logo-wrapper{
+    display:inline-block;
+    margin-bottom:15px;
+}
+
+.nhay-logo{
+    color:#B35A1F;
+    font-size:2.5rem;
+    margin-bottom:0;
+}
+
+.nhay-logo span{
+    color:#D6A4A4;
+    font-size:0.6em;
+}
+
+.line-decor{
+    width:60%;
+    height:4px;
+    background-color:#e67e22;
+    margin-top:5px;
+    border-radius:20px;
+}
+
+/* Links */
+
+.quick-links li{
+    margin-bottom:10px;
+    list-style:none;
+}
+
+.quick-links li a{
+    text-decoration:none;
+    color:#333;
+    font-size:0.9rem;
+    transition:0.3s;
+}
+
+.quick-links li a:hover{
+    color:#b35a1f;
+    padding-left:3px;
+}
+
+/* Copyright */
+
+.copyright{
+    background-color:#f5ccaa;
+    font-size:0.85rem;
+    letter-spacing:1px;
+    padding:15px 0;
+    text-align:center;
+}
+
+/* Vertical Line */
+
+.vr{
+    width:1.5px;
+    background-color:#333;
+    opacity:1;
+}
+
+
+/* DARK MODE */
+.dark-toggle{
+    background: transparent;
+    border: 1.5px solid #b35a1f;
+    border-radius: 50px;
+    padding: 6px 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.3s ease;
+    color: #b35a1f;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-left: 10px;
+    white-space: nowrap;
+}
+
+.dark-toggle:hover{
+    background: #b35a1f;
+    color: #fff;
+}
+
+.dark-toggle .icon-moon{ display: inline; }
+.dark-toggle .icon-sun{ display: none; }
+
+body.dark-mode{
+    background-color: #251510;
+    color: #f2ddd0;
+    transition: background-color 0.35s ease, color 0.35s ease;
+}
+
+/* Navbar */
+body.dark-mode .navbar{
+    background-color: #301a10 !important;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+body.dark-mode .nav-links a{
+    color: #f2ddd0 !important;
+}
+
+body.dark-mode .logo{
+    color: #d4713a;
+}
+
+body.dark-mode .logo span{
+    color: #c47a7a;
+}
+
+/* Toggle dalam dark mode */
+body.dark-mode .dark-toggle{
+    border-color: #d4713a;
+    color: #d4713a;
+}
+
+body.dark-mode .dark-toggle:hover{
+    background: #d4713a;
+    color: #251510;
+}
+
+body.dark-mode .dark-toggle .icon-moon{ display: none; }
+body.dark-mode .dark-toggle .icon-sun{ display: inline; }
+
+/* Experience section */
+body.dark-mode .experience-section{
+    background: linear-gradient(to bottom, #251510, #2c1810);
+}
+
+body.dark-mode .experience-section .small-title{
+    color: #c47a7a;
+}
+
+body.dark-mode .experience-section .main-title{
+    color: #f2ddd0;
+}
+
+body.dark-mode .experience-section .main-title span{
+    color: #c47a7a;
+}
+
+/* Card */
+body.dark-mode .experience-card{
+    background: rgba(62, 36, 22, 0.75);
+    border-color: rgba(107, 56, 32, 0.5);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+body.dark-mode .experience-card p{
+    color: #c2967a;
+}
+
+/* Footer */
+body.dark-mode .footer-top{
+    background-color: #2c1810;
+}
+
+body.dark-mode .footer-top h5{
+    color: #f2ddd0;
+}
+
+body.dark-mode .nhay-logo{
+    color: #d4713a;
+}
+
+body.dark-mode .nhay-logo span{
+    color: #c47a7a;
+}
+
+body.dark-mode .text-muted{
+    color: #7a5040 !important;
+}
+
+body.dark-mode .quick-links li a{
+    color: #c2967a;
+}
+
+body.dark-mode .quick-links li a:hover{
+    color: #d4713a;
+}
+
+body.dark-mode .copyright{
+    background-color: #1e100a;
+    color: #7a5040;
+}
+
+    </style>
+
+<header class="sticky-top animate__animated animate__fadeIn">
+    <nav class="navbar d-flex justify-content-between align-items-center">
+
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo" width="40" height="40">
+            <div>NHAY<span>EON</span></div>
+        </div>
+
+        <ul class="nav-links mb-0">
+            <li><a href="../portfolio1/index.html">HOME</a></li>
+            <li><a href="../portfolio1/index.html#about">ABOUT ME</a></li>
+            <li><a href="../portfolio1/index.html#skill">SKILLS</a></li>
+            <li><a href="../portfolio1/index.html#project">PROJECT</a></li>
+            <li><a href="../portfolio1/index.html#contact">CONTACT</a></li>
+
+
+        <!-- DARK MODE TOGGLE — tambahan -->
+        <button class="dark-toggle" id="darkToggle" aria-label="Toggle dark mode">
+            <span class="icon-moon">🌙 DARK</span>
+            <span class="icon-sun">☀️ LIGHT</span>
+        </button>
+        </ul>
+    </nav>
+</header>
+    
+<!-- EXPERIENCE SECTION -->
+<section class="experience-section">
+
+    <div class="container">
+
+        <h5 class="small-title">MY JOURNEY</h5>
+
+        <h1 class="main-title">
+            Experience in <span>Web Development</span>
+        </h1>
+
+        <div class="experience-card">
+
+            <p>
+                I had an interesting experience while creating a portfolio website project for school. 
+                The project was part of my web development assignment, and I worked on it enthusiastically 
+                because I wanted to improve my coding skills. Before starting the project, I planned the 
+                design and thought about the content that I wanted to display on the website.
+            </p>
+
+            <p>
+                Before creating the website, I edited and designed the interface in Figma. 
+                I created a pink and white themed design to make the website look soft, aesthetic, 
+                and modern. I carefully arranged the layout, selected suitable fonts, and combined 
+                several colors to create a more attractive appearance.
+            </p>
+
+            <p>
+                I used HTML, CSS, and JavaScript to create the portfolio website. First, I made 
+                the homepage and added my profile information. After that, I designed the skills 
+                section, the landing page projects that I created during the second semester, and 
+                the contact page. I also added animations, color gradients, and modern layouts to 
+                make the website look more attractive and aesthetic.
+            </p>
+
+            <p>
+                During the coding process, I faced several problems. Sometimes the layout became 
+                messy, the animations did not work properly, and there were many errors in my code. 
+                I felt confused and tired, but I did not give up. I tried to fix the errors by 
+                checking the code carefully, watching tutorials, and asking my friends for help.
+            </p>
+
+            <p>
+                After spending many hours coding and editing the website, I finally completed the 
+                project successfully. I felt very proud and satisfied when I saw the final result 
+                of my portfolio website. The project looked modern, creative, and more attractive 
+                than I had imagined. From this experience, I learned many new things about web 
+                development, especially about patience, creativity, and problem-solving. This project 
+                also increased my interest in coding and motivated me to create even better websites 
+                in the future.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="footer-top py-5">
+
+    <div class="container-fluid px-4">
+
+        <div class="row align-items-start gy-4">
+
+            <!-- KIRI -->
+            <div class="col-md-8 mb-4 mb-md-0" data-aos="fade-up">
+
+                <div class="logo-wrapper">
+
+                    <h3 class="fw-bold nhay-logo mb-0">
+                        NHAY<span>EON</span>
+                    </h3>
+
+                    <div class="line-decor"></div>
+
+                </div>
+
+                <p class="text-muted">
+                    Good design is visual, but good user experience (UX) is emotional.
+                    <br>
+                    Create a website that makes people's lives easier.
+                </p>
+
+            </div>
+
+            <!-- KANAN -->
+            <div class="col-md-4">
+
+                <h5 class="fw-bold mb-3">Quick Links</h5>
+
+                <ul class="list-unstyled quick-links">
+                    <li><a href="../portfolio1/index.html">HOME</a></li>
+                    <li><a href="../portfolio1/index.html#about">ABOUT ME</a></li>
+                    <li><a href="../portfolio1/index.html#skill">SKILLS</a></li>
+                    <li><a href="../portfolio1/index.html#project">PROJECT</a></li>
+                    <li><a href="../portfolio1/index.html#contact">CONTACT</a></li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<!-- COPYRIGHT -->
+<div class="copyright py-3 text-center">
+    <p class="mb-0 fw-bold">
+        COPYRIGHT © 2026 PORTFOLIO. ALL RIGHTS RESERVED
+    </p>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- DARK MODE SCRIPT — tambahan saja, tidak mengubah script di atas -->
+<script>
+    const toggleBtn = document.getElementById('darkToggle');
+    const body = document.body;
+
+    if(localStorage.getItem('darkMode') === 'enabled'){
+        body.classList.add('dark-mode');
+    }
+
+    toggleBtn.addEventListener('click', function(){
+        body.classList.toggle('dark-mode');
+        if(body.classList.contains('dark-mode')){
+            localStorage.setItem('darkMode', 'enabled');
+        } else {
+            localStorage.setItem('darkMode', 'disabled');
+        }
+    });
+</script>
+
+</body>
+</html>
