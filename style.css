@@ -764,6 +764,7 @@ section{
     font-size:14px;
     transition:.3s;
     font-weight:500;
+    margin-top:auto;
 }
 
 .card-project button:hover{
