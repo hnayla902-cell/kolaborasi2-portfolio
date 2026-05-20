@@ -21,16 +21,17 @@ body{
 
 /* Navbar Styling */
 header{
-    padding: 0;
+    padding:10px 20px 0 20px;
 }
 
 .navbar{
-    background-color:#f5ccaa !important;
+    background-color:rgba(245, 204, 170, 0.7) !important;
     backdrop-filter:blur(10px);
     -webkit-backdrop-filter:blur(10px);
-    margin:0 auto;
+    margin:0 auto; 
+    margin-top:20px;
     width:100%;
-    border-radius:50px;
+    border-radius:50px; 
     border:none;
     padding:15px 40px;
     box-shadow:0 4px 20px rgba(0, 0, 0, 0.05);
@@ -741,10 +742,15 @@ section{
     font-size:16px;
     color:#572424;
     margin-top:15px;
-    margin-bottom:15px;
+    margin-bottom:8px;
     min-height:35px;
     font-weight:600;
     line-height:1.5;
+}
+
+.card-project P{
+    color:#572424;
+    font-size:13px;
 }
 
 /* BUTTON */
